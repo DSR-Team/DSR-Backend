@@ -12,6 +12,7 @@ from nacl.signing import VerifyKey
 from nacl.exceptions import BadSignatureError
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 SECRET_KEY = os.environ.get("SECRET_KEY")
+ALGORITHM = os.environ.get("ALGORITHM")
 ipfs_prefix = "https://assets.akaswap.com/ipfs/"
 def generate_room_id():
     return ''.join(random.choices(string.ascii_letters + string.digits, k=6))
